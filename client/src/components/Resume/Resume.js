@@ -76,9 +76,9 @@ const Resume = (props) => {
     },
     {
       title: "Website for management of PPN Logistics Co., Ltd",
-      duration: { fromDate: "10/2021", toDate: "12/2022" },
+      duration: { fromDate: "10/2021", toDate: "12/2021" },
       description:
-        "Company introduction, customer care, customer management PPN freight forwarding company limited.",
+        "Company introduction, customer management PPN freight forwarding company limited.",
       subHeading: "Technologies Used: ReactJS, NodeJS",
     },
     
