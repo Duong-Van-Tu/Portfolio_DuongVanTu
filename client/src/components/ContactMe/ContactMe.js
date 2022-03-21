@@ -47,6 +47,7 @@ const ContactMe = (props) => {
 
       setBool(true);
       const res = await axios.post("/contact", data);
+      console.log(res);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -85,7 +86,7 @@ const ContactMe = (props) => {
               <i className="fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
             <a href="https://github.com/Duong-Van-Tu/">
-                  <i class="fa fa-github-alt" aria-hidden="true"></i>
+                  <i className="fa fa-github-alt" aria-hidden="true"></i>
             </a>
           </div>
           <div className="back-form">

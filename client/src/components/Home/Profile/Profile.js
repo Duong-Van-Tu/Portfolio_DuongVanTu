@@ -21,7 +21,7 @@ const Profile = () => {
                   <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                 </a>
                 <a href="https://github.com/Duong-Van-Tu/">
-                  <i class="fa fa-github-alt" aria-hidden="true"></i>
+                  <i className="fa fa-github-alt" aria-hidden="true"></i>
                 </a>
               </div>
             </div>

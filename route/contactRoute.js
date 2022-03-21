@@ -5,7 +5,6 @@ const route = express.Router();
 
 route.post("/contact", (req, res) => {
     let data = req.body;
-    console.log(data);
     if(data.name.length === 0 || data.email.length === 0 || data.message.length === 0){
         return res.json({msg: "please fill all the fields"})
     }
