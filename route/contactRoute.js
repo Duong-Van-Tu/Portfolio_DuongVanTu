@@ -35,7 +35,7 @@ route.post("/contact", (req, res) => {
 
     smtpTransporter.sendMail(mailOptions, (error) => {
         try {
-            if(error) return res.status(400).json({msg: "please fill all the fields"})
+            if(error) return res.status(400).json({msg: error})
             res.status(200).json({msg: "Thank you for contacting Tu Duong"})
         } catch (error) {
             if(error) return res.status(500).json({msg: "There is server error!"})
