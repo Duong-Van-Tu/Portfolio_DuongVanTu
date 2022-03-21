@@ -38,6 +38,7 @@ const ContactMe = (props) => {
 
   const submitForm = async (e) => {
     e.preventDefault();
+    try {
       let data = {
         name,
         email,
@@ -45,21 +46,22 @@ const ContactMe = (props) => {
       };
 
       setBool(true);
-      await axios.post("/contact", data).then(res => {
-        if (name.length === 0 || email.length === 0 || message.length === 0) {
-          setBanner(res.data.msg);
-          toast.error(res.data.msg);
-          setBool(false);
-        } else if (res.status === 200) {
-          setBanner(res.data.msg);
-          toast.success(res.data.msg);
-          setBool(false);
-          setName("");
-          setEmail("");
-          setMessage("");
-        }
-      })
-      .catch(error => console.log(error));
+      const res = await axios.post("/contact", data);
+      if (name.length === 0 || email.length === 0 || message.length === 0) {
+        setBanner(res.data.msg);
+        toast.error(res.data.msg);
+        setBool(false);
+      } else if (res.status === 200) {
+        setBanner(res.data.msg);
+        toast.success(res.data.msg);
+        setBool(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
