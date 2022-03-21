@@ -47,7 +47,6 @@ const ContactMe = (props) => {
 
       setBool(true);
       const res = await axios.post("/contact", data);
-      console.log(res);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
