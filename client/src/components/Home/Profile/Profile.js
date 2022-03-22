@@ -64,7 +64,7 @@ const Profile = () => {
                 Hire Me
               </button>
               <a
-                href="CV_DuongVanTu_InternFullStack.pdf"
+                href="CV_DuongVanTu.pdf"
                 download="CV DuongVanTu_FullStack.pdf"
               >
                 <button className="btn highlighted-btn">Get Resume</button>
