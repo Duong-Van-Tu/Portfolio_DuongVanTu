@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://portfolio-duongvantu.herokuapp.com",
+  "proxy": "https://portfolio-duongvantu.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
