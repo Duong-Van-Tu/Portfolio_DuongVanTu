@@ -5,6 +5,7 @@ const route = express.Router();
 
 route.post("/contact", (req, res) => {
     let data = req.body;
+
     if(data.name.length === 0 || data.email.length === 0 || data.message.length === 0){
         return res.json({msg: "please fill all the fields"})
     }
@@ -19,8 +20,8 @@ route.post("/contact", (req, res) => {
     })
 
     let mailOptions = {
-        from: data.email,
-        to: "vantuit99@gmail.com",
+        from: "vantuit99@gmail.com",
+        to: data.email,
         subject: `message from ${data.name}`,
         html: `
             <h3>Informations</h3>
